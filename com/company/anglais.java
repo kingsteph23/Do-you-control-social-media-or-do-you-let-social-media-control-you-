@@ -385,12 +385,75 @@ public class anglais {
 
         if (overall > 0 && overall < 15){
             System.out.println("|User is in control of social media.|");
-        }else if(overall>15 && overall<23){
+        }else if(overall>15 && overall<22){
             System.out.println("|Average usage. SM doesn't isn't control of user, but not to the point of being considered a low usage user. But still conscious about usage|");
 
         }else if(overall>24){
-            System.out.println("|Heavy Usage. Social Media does influence user. SM in control of user.|");
+            System.out.println("""
+                    |Heavy Usage. Social Media does influence user. SM in control of user.|
+                    But although you may use these sites alot, there are some ways to combat it:
+                    
+                    Tips to control social media"•
+                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use, 
+                    does seeing something on your Instagram feed result in you having negative emotions). use them with intent
+                    
+                    •With the exception of calls/maybe messages, turn of all  notifications.  
+                    Do you really think you need to know that your friend like your post?
+                    
+                    •Create a distance between you and your devices. Or no device zones.  
+                    Rules such as not sleeping with your phone right next to you, or I can’t use my phone when I’m in my room, or If I am at a family reunion
+                    
+                    •If you ever feel boredom, or tempting to go on social media sites, switch to a hobby(preferably one off the screen like reading, learning a new language, cooking, 
+                    or some activity like going for a walk at the park, playing basketball with a friend(s), or workout(without any devices). 
+                    Possibilities are endless(just make sure their positive/beneficial habits tho
+                    
+                    •Remove all social media apps off phone.If you do want to  still use social media: use the browser versions of the apps
+                    
+                    •	Set times when you can only access your phone or social media sites.  
+                    So something like, any time prior to noon, I can’t be on social media.  Or once it hits 9:30pm, I can’t be on my phone with the exception of answering calls
+                   
+                    """);
+
         }
+
+            System.out.println();
+            System.out.println("Want some extra tips\t" +name+ "?" +
+                    "\s(y)yes" +
+                    "\s(n)no");
+            String calnewport = scan.nextLine();
+
+
+            if("n".equals(calnewport) || "no".equals(calnewport)){
+                System.out.println("Well than, thank you for filling out this survey," +name+", I hope you learned a thing or two" +
+                        "\nAnd think about these tips next time you use social Media.  Have a blessed day\uD83D\uDE42");
+
+            }else{
+                System.out.println("""
+                        Note, some of these tips are from Cal Newport's book(Digital Minaimalism) which is a book i suggest you read:
+                        •Start a Thirty day detox
+                        •During detox, replace all optional technologies(unless they serve a very very very important role in your life such as being used for a job), a
+                        and replace them with high leisure activities
+                                                
+                        •Once thirty days end, carefully reintroduce optional technologies in ya life, 
+                        but remember the following:
+                                                
+                        •Does it…:
+                        •1. Serve something you deeply value (offering some benefit is not enough).\s
+                        •2. Be the best way to use technology to serve this value (if it’s not, replace it with something better).\s
+                        •3. Have a role in your life that is constrained with a standard operating procedure that specifies when and how you use it.”
+                                                
+                         •If you are tempting to use phone, or don’t want to access at certain times of the day, switch it to greyscale, 
+                         which results in your phone going from color to black and white.
+                         
+                         •If you really want to go far, switch your phone(smartphone) into a dumbphone which allows you to do what you want to do, 
+                         rather than doing something completely random.  Maybe if you want, switch to a fliphone
+                         
+                         •Depending on your browser(might be better for chrome/Firefox browsers), 
+                         add extensions that block help with potentially falling into s internet rabbit holes (DF YouTube, Stay Focused, Self-control
+                                      
+
+                        """);
+            }
 
 
 
