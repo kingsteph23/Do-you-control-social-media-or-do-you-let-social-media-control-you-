@@ -6,6 +6,7 @@ public class anglais {
 
     public static void main(String[] args) {
         // INTRO
+        // *note* if you see SM if some places of the survey, just  shorten version of (Social Media)
 
         System.out.println("""
                 ________________________________________
@@ -59,7 +60,7 @@ public class anglais {
 
         System.out.println();
         System.out.println("""
-                However, today, we're gonna see, if you control social media,\sor does social media control you\uD83D\uDE33\sAre you ready?
+                However, today, we're gonna see, if you control social media,\sor does social media control you?\uD83D\uDE33\s\sPlease be honest when answering the questions.Are you ready?
                 yes
                 nope
                 :""");
@@ -119,7 +120,7 @@ public class anglais {
             score += 3;
         }
 
-        //Question 3
+        //Question 3 intro
         System.out.println();
         System.out.println("Onto question 3," + name);
         System.out.println();
@@ -367,6 +368,8 @@ public class anglais {
 
         String finalcharts = "| %-15s | %-4d |%n";
 
+//chart which reveals the scoring/grading based on users response from the following 11 questions.  Basically reveals the categorization of user
+
         System.out.format("+-----------------+------+----------+%n");
         System.out.format("|   Name of user: | " + name + "    |%n");
         System.out.format("+-----------------+------+----------+%n");
@@ -374,42 +377,62 @@ public class anglais {
         System.out.format("+-----------------+------+---------+%n");
         System.out.format("| Score between 0-14     | Low usage|%n");
         System.out.format("+-----------------+------+----------+%n");
-        System.out.format("| Score between 15-23| Average usage|%n");
+        System.out.format("| Score between 15-22| Average usage|%n");
         System.out.format("+-----------------+------+----------|%n");
-        System.out.format("| Score of 24+  | Heavy Usage.      |%n");
+        System.out.format("| Score of 23+  | Heavy Usage.      |%n");
         System.out.format("+-----------------+------+---------+|%n");
 
         System.out.println();
 
         int overall = score;
-
-        if (overall > 0 && overall < 15){
+ // users with score of greater than 0 but less than 15 is considered a low SM user
+        if (overall > 0 && overall <= 15){
             System.out.println("|User is in control of social media.|");
-        }else if(overall>15 && overall<22){
-            System.out.println("|Average usage. SM doesn't isn't control of user, but not to the point of being considered a low usage user. But still conscious about usage|");
-
-        }else if(overall>24){
+// users with a score greater than 16, but less than 23 are considered average/moderate users
+        }else if(overall >= 16 && overall<23){
+            System.out.println("""
+                    |Average usage. Social Media doesn't isn't control of user, but not to the point of being considered a low usage user. But still conscious about usage|
+                    Tips for Average usage users:
+                                        
+                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use,\040
+                    does seeing something on your Instagram feed result in you having negative emotions). use them with intent
+                                        
+                    •Set times when you can only access your phone or social media sites.\040\040
+                    So something like, any time prior to noon, I can’t be on social media.\040\040
+                    Or once it hits 9:30pm, I can’t be on my phone with the exception of answering calls
+                                        
+                    •With the exception of calls/maybe messages, turn of all  notifications.  Do you really think you need to know that your friend like your post?
+                                        
+                    •Start unfollowing social media pages that don’t bring any value to you or distracts you(meme/trendy pages).\040
+                    And replace them that do bring value(motivation groups)
+                                        
+                    •	Remove all social media apps off phone
+                    •	If you do want to use social media: use the browser versions of the apps
+                                        
+                    """);
+// user with score greater than 23, is a high usage user.
+        }else if(overall >= 23){
             System.out.println("""
                     |Heavy Usage. Social Media does influence user. SM in control of user.|
-                    But although you may use these sites alot, there are some ways to combat it:
+                    But although you may use these sites a lot, there are some ways to combat it:
                     
                     Tips to control social media"•
-                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use, 
+                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use,\040
                     does seeing something on your Instagram feed result in you having negative emotions). use them with intent
                     
-                    •With the exception of calls/maybe messages, turn of all  notifications.  
+                    •With the exception of calls/maybe messages, turn of all  notifications.\040\040
                     Do you really think you need to know that your friend like your post?
                     
-                    •Create a distance between you and your devices. Or no device zones.  
+                    •Create a distance between you and your devices. Or no device zones.\040\040
                     Rules such as not sleeping with your phone right next to you, or I can’t use my phone when I’m in my room, or If I am at a family reunion
                     
-                    •If you ever feel boredom, or tempting to go on social media sites, switch to a hobby(preferably one off the screen like reading, learning a new language, cooking, 
-                    or some activity like going for a walk at the park, playing basketball with a friend(s), or workout(without any devices). 
+                    •If you ever feel boredom, or tempting to go on social media sites, switch to a hobby(preferably one off the screen like reading, learning a new language, cooking,\040
+                    or some activity like going for a walk at the park, playing basketball with a friend(s), or workout(without any devices).\040
                     Possibilities are endless(just make sure their positive/beneficial habits tho
                     
                     •Remove all social media apps off phone.If you do want to  still use social media: use the browser versions of the apps
                     
-                    •	Set times when you can only access your phone or social media sites.  
+                    •Set times when you can only access your phone or social media sites.\040\040
                     So something like, any time prior to noon, I can’t be on social media.  Or once it hits 9:30pm, I can’t be on my phone with the exception of answering calls
                    
                     """);
@@ -422,19 +445,19 @@ public class anglais {
                     "\s(n)no");
             String calnewport = scan.nextLine();
 
-
+// cal newport "digital minimalism book tips".  Tips based on his book/mixture of my own tips
             if("n".equals(calnewport) || "no".equals(calnewport)){
                 System.out.println("Well than, thank you for filling out this survey," +name+", I hope you learned a thing or two" +
                         "\nAnd think about these tips next time you use social Media.  Have a blessed day\uD83D\uDE42");
-
+                            System.exit(0);
             }else{
                 System.out.println("""
-                        Note, some of these tips are from Cal Newport's book(Digital Minaimalism) which is a book i suggest you read:
+                        Note, some of these tips are from Cal Newport's book(Digital Minaimalism) which is a book i recommend you read:
                         •Start a Thirty day detox
                         •During detox, replace all optional technologies(unless they serve a very very very important role in your life such as being used for a job), a
                         and replace them with high leisure activities
                                                 
-                        •Once thirty days end, carefully reintroduce optional technologies in ya life, 
+                        •Once thirty days end, carefully reintroduce optional technologies in ya life,\040
                         but remember the following:
                                                 
                         •Does it…:
@@ -442,15 +465,21 @@ public class anglais {
                         •2. Be the best way to use technology to serve this value (if it’s not, replace it with something better).\s
                         •3. Have a role in your life that is constrained with a standard operating procedure that specifies when and how you use it.”
                                                 
-                         •If you are tempting to use phone, or don’t want to access at certain times of the day, switch it to greyscale, 
+                         •If you are tempting to use phone, or don’t want to access at certain times of the day, switch it to greyscale,\040
                          which results in your phone going from color to black and white.
                          
-                         •If you really want to go far, switch your phone(smartphone) into a dumbphone which allows you to do what you want to do, 
-                         rather than doing something completely random.  Maybe if you want, switch to a fliphone
+                         •If you really want to go far, switch your phone(smartphone) into a dumb phone which allows you to do what you want to do,\040
+                         rather than doing something completely random.  Maybe if you want, switch to a flip phone
                          
-                         •Depending on your browser(might be better for chrome/Firefox browsers), 
+                         •Depending on your browser(might be better for chrome/Firefox browsers),\040
                          add extensions that block help with potentially falling into s internet rabbit holes (DF YouTube, Stay Focused, Self-control
-                                      
+                         
+                         Learn to balance.  Remember there is a real world outside of your phone.\040
+                         Despite all the crazy stuff going on, life’s still  beautiful. Get ya some sun
+                          
+                         •Become more knowledgeable on the issue and why social networks are  designed to be addictive.\040\040\040
+                         
+                         Thank you for completeting this survey, and have a blessed day!"
 
                         """);
             }
