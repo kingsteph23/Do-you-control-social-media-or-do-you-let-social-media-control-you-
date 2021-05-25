@@ -46,7 +46,7 @@ public class anglais {
         switch (mood) {
             case "B", "Meh" -> System.out.println("Ehh, that's fine as well.");
             case "C", "Im just vibin atm" -> System.out.println("How you vibin rn\uD83D\uDE33." +
-                                                                "\sI respect the vibe\uD83D\uDC4D\uD83C\uDFFE\uD83D\uDE2B");
+                    "\sI respect the vibe\uD83D\uDC4D\uD83C\uDFFE\uD83D\uDE2B");
             case "D", "I feel like (S)uger, (H), honey,(Ice), (Tea)." -> System.out.println("That's wack\uD83E\uDD27\uD83E\uDD27");
         }
         System.out.println();
@@ -60,7 +60,7 @@ public class anglais {
 
         System.out.println();
         System.out.println("""
-                However, today, we're gonna see, if you control social media,\sor does social media control you?\uD83D\uDE33\s\sPlease be honest when answering the questions.Are you ready?
+                However, today, we're gonna see, if you control social media, or does social media control you?\uD83D\uDE33  Please be honest when answering the questions.Are you ready?
                 yes
                 nope
                 :""");
@@ -86,16 +86,19 @@ public class anglais {
 
         String length = scan.nextLine();
 
-        if ("1".equals(length) || "1-2 years".equals(length)) {
-            score += 1;
-            System.out.println("Pretty recent and new to the social network world arent ya?");
-
-        } else if ("2".equals(length) || "3-6 years".equals(length)) {
-            score += 2;
-            System.out.println("A bit used  to the game and been here for a while....");
-        } else if ("3".equals(length) || "6+ years".equals(length)) {
-            score += 3;
-            System.out.println("GEEZZZ, You been in the game for a hella long time ");
+        switch (length) {
+            case "1", "1-2 years" -> {
+                score += 1;
+                System.out.println("Pretty recent and new to the social network world arent ya?");
+            }
+            case "2", "3-6 years" -> {
+                score += 2;
+                System.out.println("A bit used  to the game and been here for a while....");
+            }
+            case "3", "6+ years" -> {
+                score += 3;
+                System.out.println("GEEZZZ, You been in the game for a hella long time ");
+            }
         }
 
         // Question #2
@@ -298,19 +301,13 @@ public class anglais {
 
         String FOMO = scan.nextLine();
 
-        if ("a".equals(FOMO) || "don't even bother with the post and keep scrolling".equals(FOMO)) {
-            score += 1;
-
-
-        } else if ("b".equals(FOMO) || "if i start experiencing emotions, i'll get off the site/app immediately and do something more productive ".equals(FOMO)) {
-            score += 2;
-
-
-        } else if ("c".equals(FOMO) || "keep looking at the post or similar post, and allow myself to experience  FOMO".equals(FOMO)) {
-            score += 3;
-
-
-            System.out.println();
+        switch (FOMO) {
+            case "a", "don't even bother with the post and keep scrolling" -> score += 1;
+            case "b", "if i start experiencing emotions, i'll get off the site/app immediately and do something more productive " -> score += 2;
+            case "c", "keep looking at the post or similar post, and allow myself to experience  FOMO" -> {
+                score += 3;
+                System.out.println();
+            }
         }
 
         // Question 10
@@ -328,10 +325,12 @@ public class anglais {
 
         String newsfeed2 = scan.nextLine();
 
-        switch (newsfeed2) {
-            case "e", "The information does effect my views on a situation" -> score += 3;
-            case "ne", "The information barely, if not doesn't have any effect on my views on a situation" -> score += 1;
-            case "n", "The information doesn't really effect my views on a situation, but i might gain interest"-> score += 2;
+        if ("e".equals(newsfeed2) || "The information does effect my views on a situation".equals(newsfeed2)) {
+            score += 3;
+        } else if ("ne".equals(newsfeed2) || "The information barely, if not doesn't have any effect on my views on a situation".equals(newsfeed2)) {
+            score += 1;
+        } else if ("n".equals(newsfeed2) || "The information doesn't really effect my views on a situation, but i might gain interest".equals(newsfeed2)) {
+            score += 2;
         }
 
 
@@ -359,7 +358,6 @@ public class anglais {
             case "a", "It captures me" -> score += 3;
             case "b", "i might notice it, but i wont be triggered" -> score += 2;
             case "c", "Nope it doesn't capture/trigger my attention" -> score += 1;
-
         }
 
         int fin = score;
@@ -393,48 +391,48 @@ public class anglais {
             System.out.println("""
                     |Average usage. Social Media doesn't isn't control of user, but not to the point of being considered a low usage user. But still conscious about usage|
                     Tips for Average usage users:
-                                        
-                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use,\040
+
+                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use,\s
                     does seeing something on your Instagram feed result in you having negative emotions). use them with intent
-                                        
-                    •Set times when you can only access your phone or social media sites.\040\040
-                    So something like, any time prior to noon, I can’t be on social media.\040\040
+
+                    •Set times when you can only access your phone or social media sites. \s
+                    So something like, any time prior to noon, I can’t be on social media. \s
                     Or once it hits 9:30pm, I can’t be on my phone with the exception of answering calls
-                                        
+
                     •With the exception of calls/maybe messages, turn of all  notifications.  Do you really think you need to know that your friend like your post?
-                                        
-                    •Start unfollowing social media pages that don’t bring any value to you or distracts you(meme/trendy pages).\040
+
+                    •Start unfollowing social media pages that don’t bring any value to you or distracts you(meme/trendy pages).\s
                     And replace them that do bring value(motivation groups)
-                                        
+
                     •	Remove all social media apps off phone
                     •	If you do want to use social media: use the browser versions of the apps
-                                        
+
                     """);
 // user with score greater than 23, is a high usage user.
         }else if(overall >= 23){
             System.out.println("""
                     |Heavy Usage. Social Media does influence user. SM in control of user.|
                     But although you may use these sites a lot, there are some ways to combat it:
-                    
+
                     Tips to control social media"•
-                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use,\040
+                    •Be mindful of your actions on social media(how long do you spend on social in a day, pattern of social media use,\s
                     does seeing something on your Instagram feed result in you having negative emotions). use them with intent
-                    
-                    •With the exception of calls/maybe messages, turn of all  notifications.\040\040
+
+                    •With the exception of calls/maybe messages, turn of all  notifications. \s
                     Do you really think you need to know that your friend like your post?
-                    
-                    •Create a distance between you and your devices. Or no device zones.\040\040
+
+                    •Create a distance between you and your devices. Or no device zones. \s
                     Rules such as not sleeping with your phone right next to you, or I can’t use my phone when I’m in my room, or If I am at a family reunion
-                    
-                    •If you ever feel boredom, or tempting to go on social media sites, switch to a hobby(preferably one off the screen like reading, learning a new language, cooking,\040
-                    or some activity like going for a walk at the park, playing basketball with a friend(s), or workout(without any devices).\040
+
+                    •If you ever feel boredom, or tempting to go on social media sites, switch to a hobby(preferably one off the screen like reading, learning a new language, cooking,\s
+                    or some activity like going for a walk at the park, playing basketball with a friend(s), or workout(without any devices).\s
                     Possibilities are endless(just make sure their positive/beneficial habits tho
-                    
+
                     •Remove all social media apps off phone.If you do want to  still use social media: use the browser versions of the apps
-                    
-                    •Set times when you can only access your phone or social media sites.\040\040
+
+                    •Set times when you can only access your phone or social media sites. \s
                     So something like, any time prior to noon, I can’t be on social media.  Or once it hits 9:30pm, I can’t be on my phone with the exception of answering calls
-                   
+
                     """);
 
         }
@@ -456,29 +454,29 @@ public class anglais {
                         •Start a Thirty day detox
                         •During detox, replace all optional technologies(unless they serve a very very very important role in your life such as being used for a job), a
                         and replace them with high leisure activities
-                                                
-                        •Once thirty days end, carefully reintroduce optional technologies in ya life,\040
+
+                        •Once thirty days end, carefully reintroduce optional technologies in ya life,\s
                         but remember the following:
-                                                
+
                         •Does it…:
                         •1. Serve something you deeply value (offering some benefit is not enough).\s
                         •2. Be the best way to use technology to serve this value (if it’s not, replace it with something better).\s
                         •3. Have a role in your life that is constrained with a standard operating procedure that specifies when and how you use it.”
-                                                
-                         •If you are tempting to use phone, or don’t want to access at certain times of the day, switch it to greyscale,\040
+
+                         •If you are tempting to use phone, or don’t want to access at certain times of the day, switch it to greyscale,\s
                          which results in your phone going from color to black and white.
-                         
-                         •If you really want to go far, switch your phone(smartphone) into a dumb phone which allows you to do what you want to do,\040
+
+                         •If you really want to go far, switch your phone(smartphone) into a dumb phone which allows you to do what you want to do,\s
                          rather than doing something completely random.  Maybe if you want, switch to a flip phone
-                         
-                         •Depending on your browser(might be better for chrome/Firefox browsers),\040
+
+                         •Depending on your browser(might be better for chrome/Firefox browsers),\s
                          add extensions that block help with potentially falling into s internet rabbit holes (DF YouTube, Stay Focused, Self-control
-                         
-                         Learn to balance.  Remember there is a real world outside of your phone.\040
+
+                         Learn to balance.  Remember there is a real world outside of your phone.\s
                          Despite all the crazy stuff going on, life’s still  beautiful. Get ya some sun
-                          
-                         •Become more knowledgeable on the issue and why social networks are  designed to be addictive.\040\040\040
-                         
+
+                         •Become more knowledgeable on the issue and why social networks are  designed to be addictive.  \s
+
                          Thank you for completeting this survey, and have a blessed day!"
 
                         """);
